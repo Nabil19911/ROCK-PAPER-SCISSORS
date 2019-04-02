@@ -1,9 +1,12 @@
 // Get all the DOM elements and save it to variable
-
-// function messageBox(){
-
-
-// }
+// user
+const rockU = document.getElementById('rock-u');
+const paperU = document.getElementById('paper-u');
+const scissorU = document.getElementById('scissor-u');
+// com
+const rockC = document.getElementById('rock-c');
+const paperC = document.getElementById('paper-c');
+const scissorC = document.getElementById('scissor-c');
 
 
 
@@ -19,3 +22,4 @@ function comClick() {
 	alert("Please select from your section");
 }
 // Third Part
+
