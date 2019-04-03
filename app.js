@@ -34,6 +34,7 @@ const choice = ['rock', 'paper', 'scissor'];
 
 function comPlay() {
 	let result = choice[Math.floor(Math.random() * choice.length)];
+
 	if (result == 'rock') {
 		imageC.setAttribute("src" ,"image/Rock.png");
 		comRstC.innerHTML = "Computer Selected Rock";
@@ -45,15 +46,16 @@ function comPlay() {
 		imageC.setAttribute("src" ,"image/Scissor.png");
 		comRstC.innerHTML = "Computer Selected Scissor";
 	}
+	return result;
 }
 
-// Player Part
+// Result
 
 function playGround(userSelection, comSelection) {
 	
-	if (userSelection == comSelection) {
+	if (userSelection === comSelection) {
 		resultM.innerHTML = "It's a tie";
-	}else if(userSelection == 'rock'){
+	} else if(userSelection == 'rock') {
 		if (comSelection == 'scissor') {
 			resultM.innerHTML = "You Win! Rock beats scissors.";
 		} else{
@@ -106,5 +108,5 @@ paperU.addEventListener("click", function() {
 		});
 		
 scissorU.addEventListener("click", function() {
-			game('scissors');
+			game('scissor');
 		});
