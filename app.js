@@ -17,79 +17,105 @@ const comRstC = document.getElementById('com-result');
 
 //common variable
 const resultM = document.getElementById('in-rst');
-
+// ************************************************************************************ //
 
 // First Part
 let player = document.getElementById('name-c');
 let UserName = prompt("Enter Your name");
 player.innerHTML = UserName;
 
-// Second Part
+
+
+
+// Enter your name
 function comClick() {
 	alert("Please select from your section");
 }
+
+
+
 // com Part
-
-const choice = ['rock', 'paper', 'scissor'];
-
 function comPlay() {
+	// make computer selection[array]
+	const choice = ['rock', 'paper', 'scissor'];
+	// store the computer selection in result variable
 	let result = choice[Math.floor(Math.random() * choice.length)];
 
 	if (result == 'rock') {
 		imageC.setAttribute("src" ,"image/Rock.png");
 		comRstC.innerHTML = "Computer Selected Rock";
-	} else if (result == 'paper')
+	} 
+	else if (result == 'paper')
 	{
 		imageC.setAttribute("src" ,"image/Paper.png");
 		comRstC.innerHTML = "Computer Selected Paper";
-	} else {
+	} 
+	else {
 		imageC.setAttribute("src" ,"image/Scissor.png");
 		comRstC.innerHTML = "Computer Selected Scissor";
 	}
 	return result;
 }
 
-// Result
 
+
+
+// Comparision and result message
 function playGround(userSelection, comSelection) {
 	
 	if (userSelection === comSelection) {
+
 		resultM.innerHTML = "It's a tie";
-	} else if(userSelection == 'rock') {
+
+	} 
+	else if(userSelection == 'rock') {
+
 		if (comSelection == 'scissor') {
 			resultM.innerHTML = "You Win! Rock beats scissors.";
-		} else{
+		} 
+		else{
 			resultM.innerHTML = "You Lose! Paper beats rock.";
 		}
-	} else if (userSelection == 'paper') {
+	} 
+
+	else if (userSelection == 'paper') {
+
 		if (comSelection == 'rock') {
 			resultM.innerHTML = "You Win! Paper beats rock";
-		} else{
+		} 
+		else{
 			resultM.innerHTML = "You Lose! Scissors beat paper.";
 		}
-	} else{
+	} 
+
+	else{
 		if (comSelection == 'paper') {
 			resultM.innerHTML = "You Win! Scissors beat paper.";
-		} else{
+		} 
+		else{
 			resultM.innerHTML = "You Lose! Rock beats scissors.";
 		}
 	}
 
 }
 
-// function
 
+
+
+// function
 function game(userChoice) {
 	let player = userChoice;
 
 	if (player == 'rock') {
 		imageU.setAttribute("src" ,"image/Rock.png");
 		comRstU.innerHTML = UserName + " Selected Rock";
-	} else if (player == 'paper')
+	} 
+	else if (player == 'paper')
 	{
 		imageU.setAttribute("src" ,"image/Paper.png");
 		comRstU.innerHTML = UserName + " Selected Paper";
-	} else {
+	} 
+	else {
 		imageU.setAttribute("src" ,"image/Scissor.png");
 		comRstU.innerHTML = UserName + " Selected Scissor";
 	}
@@ -98,7 +124,9 @@ function game(userChoice) {
 	playGround(player, comp);
 }
 
-// EventListener
+
+
+// EventListener[accordingly user selection]
 rockU.addEventListener("click", function() {
 			game('rock');
 		});
