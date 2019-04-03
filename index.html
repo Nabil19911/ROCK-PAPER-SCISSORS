@@ -6,7 +6,7 @@
 </head>
 <body>
 	<section id="main">
-		<!-- User -->
+		<!-- Computer -->
 		<div id="left" class="player">
 			<p class="name-tag" id="name-u">computer</p>
 			<img onclick="comClick()" class="img-holder" id="rock-c" src="image/Rock.png">
@@ -15,18 +15,26 @@
 		</div>
 		<!-- Function -->
 		<div id="mid">
-			<div id="user-slt" class="result"></div>
+			<p id="com-result" class="rst">AI Selection</p>
+			<div id="user-slt" class="result">
+				<img class="choice" id="com-choice" src="">
+			</div>
+			
 			<p id="in-rst">result</p>
-			<div id="com-slt" class="result"></div>
+			
+			<div id="com-slt" class="result">
+				<img class="choice" id="user-choice" src="">
+			</div>
+			<p id="user-result" class="rst">Your selection</p>
 		</div>
-		<!-- Computer -->
+		<!-- User -->
 		<div id="right" class="com">
 			<img class="img-holder" id="rock-u" src="image/Rock.png">
 			<img class="img-holder" id="paper-u" src="image/Paper.png">
 			<img class="img-holder" id="scissor-u" src="image/Scissor.png">
 			<p class="name-tag" id="name-c">user</p>
 		</div>
-		<button id="btn">Press</button>		
+<!-- <button id="btn">Press</button> -->	
 	</section>
 </body>
 <script type="text/javascript" src="app.js"></script>
