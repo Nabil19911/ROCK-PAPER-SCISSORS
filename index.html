@@ -6,38 +6,52 @@
 </head>
 <body>
 	<section id="main">
-
-		<!-- Computer -->
-		<div id="left" class="player">
-			<p class="name-tag" id="name-u">computer</p>
-			<img onclick="comClick()" class="img-holder" id="rock-c" src="image/Rock.png">
-			<img onclick="comClick()" class="img-holder" id="paper-c" src="image/Paper.png">
-			<img onclick="comClick()" class="img-holder" id="scissor-c" src="image/Scissor.png">
-		</div>
-
-		<!-- result section -->
-		<div id="mid">
-			<p id="com-result" class="rst">AI Selection</p>
-			<div id="user-slt" class="result">
-				<img class="choice" id="com-choice" src="">
+		<div id="middle">
+			<!-- Computer -->
+			<div id="left" class="com">
+				<p id="score-c" class="score">0</p>
+				<p class="name-tag" id="name-u">computer</p>
+				<img onclick="comClick()" class="img-holder" id="rock-c" src="image/Rock.png">
+				<img onclick="comClick()" class="img-holder" id="paper-c" src="image/Paper.png">
+				<img onclick="comClick()" class="img-holder" id="scissor-c" src="image/Scissor.png">
 			</div>
+
+			<!-- result section -->
+			<div id="mid">
+				<p id="com-result" class="rst">AI Selection</p>
+				<div id="user-slt" class="result">
+					<img class="choice" id="com-choice" src="">
+				</div>
 			
-			<p id="in-rst">result</p>
-			
-			<div id="com-slt" class="result">
-				<img class="choice" id="user-choice" src="">
+				<p id="in-rst">result</p>
+				
+				<div id="com-slt" class="result">
+					<img class="choice" id="user-choice" src="">
+				</div>
+				<p id="user-result" class="rst">Your selection</p>
 			</div>
-			<p id="user-result" class="rst">Your selection</p>
+
+			<!-- User -->
+			<div id="right" class="player">
+				<img class="img-holder" id="rock-u" src="image/Rock.png">
+				<img class="img-holder" id="paper-u" src="image/Paper.png">
+				<img class="img-holder" id="scissor-u" src="image/Scissor.png">
+				<p class="name-tag" id="name-c">user</p>
+				<p id="score-u" class="score">0</p>
+			</div>
 		</div>
 
-		<!-- User -->
-		<div id="right" class="com">
-			<img class="img-holder" id="rock-u" src="image/Rock.png">
-			<img class="img-holder" id="paper-u" src="image/Paper.png">
-			<img class="img-holder" id="scissor-u" src="image/Scissor.png">
-			<p class="name-tag" id="name-c">user</p>
+
+		<div id="footer">
+			<p id="reset-rst"></p>
+			<div id="re-start" class="btn-style">
+				<p id="reset">Start over</p>
+			</div>
+			<div id="new-player" class="btn-style">
+				<p id="reset">New Player</p>
+			</div>
 		</div>
-	
+
 	</section>
 </body>
 <script type="text/javascript" src="app.js"></script>

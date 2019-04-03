@@ -76,3 +76,35 @@ body
 	font-size: 28px;
 }
 
+.score
+{
+	font-size: 28px;
+	margin: 10px;
+}
+
+#footer
+{
+	display: none;
+}	
+#reset-rst
+{
+	text-transform: uppercase;
+	font-size: 28px;
+	font-weight: bolder;
+	margin-bottom: 25px;
+}
+.btn-style
+{
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bolder;
+	border:1px solid black;
+	padding: 5px;
+	cursor: pointer;
+	margin: 10px;
+}
+
+.btn-style:hover
+{
+	background-color: white;
+}
