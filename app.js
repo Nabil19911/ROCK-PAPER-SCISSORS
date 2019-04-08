@@ -28,12 +28,16 @@ const newPlayer = document.getElementById('new-player');
 // ************************************************************************************ //
 
 // First Part
+// get the user name through prompt and store it in player variable
+// and insert to the HTML
 let player = document.getElementById('name-c');
 var UserName = prompt("Enter Your name");
 player.innerHTML = UserName;
 
-
-
+//=================================================================//
+//This is to impress, unnecessary
+// this code will crash if the user 
+//click cancel button on prompt box
 function nameChecker()
 {
 	// if (UserName === undefined) {
@@ -48,25 +52,30 @@ function nameChecker()
 		}
 	// }
 }
+//=================================================================//
 
-
-// Enter your name
+// Alart When user clicked computer side
 function comClick() {
 	alert("Please select from your section");
 }
 
+// store the scores
 let comScore = 0;
 let userScore = 0;
 
 // com Part
+//computer selection
 function comPlay() {
 	// make computer selection[array]
 	const choice = ['rock', 'paper', 'scissor'];
 	// store the computer selection in result variable
 	let result = choice[Math.floor(Math.random() * choice.length)];
 
+	// check for result and display accordingly
 	if (result == 'rock') {
+		// insert image to HTML
 		imageC.setAttribute("src" ,"image/Rock.png");
+		//insert message to HTML
 		comRstC.innerHTML = "Computer Selected Rock";
 	} 
 	else if (result == 'paper')
@@ -85,6 +94,8 @@ function comPlay() {
 
 
 // Comparision and result message
+//Check the result and compaire the user and computers choice 
+//and deliver the message
 function playGround(userSelection, comSelection) {
 	
 	if (userSelection === comSelection) {
@@ -137,12 +148,15 @@ function playGround(userSelection, comSelection) {
 
 
 
-// function
+// Player selection
 function game(userChoice) {
 	let player = userChoice;
 
+	//Check the User selection and insert to HTML
 	if (player == 'rock') {
+		//change the image accordingly to user selection
 		imageU.setAttribute("src" ,"image/Rock.png");
+		//change the message accordingly user selection
 		comRstU.innerHTML = UserName + " Selected Rock";
 	} 
 	else if (player == 'paper')
@@ -155,10 +169,11 @@ function game(userChoice) {
 		comRstU.innerHTML = UserName + " Selected Scissor";
 	}
 
+	// runthe PlayGround function when game function triggered
 	let comp = comPlay();
 	playGround(player, comp);
 
-
+	// compare the score and display the winner
 	if (userScore == 5) {
 		middle.style.display = "none";
 		footer.style.display = "block";
@@ -170,10 +185,14 @@ function game(userChoice) {
 	}
 
 }
-nameChecker();
 
+//===============//
+//unnecessary code
+nameChecker();
+//===============//
 
 // EventListener[accordingly user selection]
+//Check the user click / when the user click run the game function
 rockU.addEventListener("click", function() {
 			game('rock');
 		});
@@ -186,6 +205,8 @@ scissorU.addEventListener("click", function() {
 			game('scissor');
 		});
 
+
+// When user clicked play again reset the game with user name
 end.addEventListener('click', function(){
 	comScore = 0;
 	userScore = 0;
@@ -200,6 +221,7 @@ end.addEventListener('click', function(){
 	footer.style.display = "none";
 })
 
+//when the user click newPlayer refresh the page
 newPlayer.addEventListener('click', function(){
 	location.reload();
 })
